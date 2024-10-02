@@ -1,0 +1,35 @@
+{
+    "name": "dartui/strauss-final-prefix",
+    "type": "project",
+    "require": {
+        "symfony/polyfill-php80": "^1.31",
+        "brianhenryie/strauss": "^0.19.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dartui\\StraussFinalPrefix\\": "src/"
+        },
+        "classmap": [
+            "dependencies/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Krzysztof Grabania",
+            "email": "krzysztof@grabania.pl"
+        }
+    ],
+    "extra": {
+        "strauss": {
+            "namespace_prefix": "Dartui\\StraussFinalPrefix\\Dependencies\\",
+            "target_directory": "dependencies",
+            "classmap_prefix": "Dartui_StraussFinalPrefix_Dependencies_"
+        }
+    },
+    "scripts": {
+        "prefix-namespaces": [
+            "strauss",
+            "composer dump-autoload"
+        ]
+    }
+}
